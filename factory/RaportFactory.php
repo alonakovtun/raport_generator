@@ -3,10 +3,11 @@
 require_once($_SERVER['DOCUMENT_ROOT'].'/factory/GraphicCardsRaport.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/factory/ProcessorsRaport.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/factory/MemoryRaport.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/factory/Creator.php');
 
-class RaportFactory
+class RaportFactory extends Creator
 {
-    public function createRaport($category)
+    public function createRaport($category): RaportFactoryInterface
     {
         $raport = $category . "Raport";
 

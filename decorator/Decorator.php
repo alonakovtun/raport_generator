@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/interfaces/RaportFactoryInterface.php')
 
 class Decorator implements CsvFormatterInterface
 {
-    protected $raport;
+    protected $raport; // raport data
 
     public function __construct($raport)
     {
